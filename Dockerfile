@@ -13,6 +13,13 @@ RUN git clone https://github.com/openvenues/libpostal && cd libpostal && ./boots
 # Install pypostal
 RUN pip3.6 install postal
 
+# Create symlinks for the C objects (so we dont need to set LD_LIBRARY_PATH).
+RUN ln -s /usr/lib/libpostal.a /usr/lib64/libpostal.a
+RUN ln -s /usr/lib/libpostal.la /usr/lib64/libpostal.la
+RUN ln -s /usr/lib/libpostal.so /usr/lib64/libpostal.so
+RUN ln -s /usr/lib/libpostal.so.1 /usr/lib64/libpostal.so.1
+RUN ln -s /usr/lib/libpostal.so.1.0.0 /usr/lib64/libpostal.so.1.0.0
+
 # Create a 'data' volume for mounting external post data
 VOLUME /data
 
