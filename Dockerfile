@@ -10,8 +10,11 @@ RUN yum -y install \
     autoconf \
     automake \
     libtool \
-    pkgconfigyum-utils \
-    https://centos7.iuscommunity.org/ius-release.rpm\
+    pkgconfig \
+    yum-utils \
+    https://centos7.iuscommunity.org/ius-release.rpm
+
+RUN yum -y install \
     python36u \
     python36u-devel \
     python36u-pip \
