@@ -30,6 +30,18 @@ RUN git clone https://github.com/openvenues/libpostal && \
 
 # Install pypostal
 RUN pip3.6 install postal
+RUN pip3.6 install happybase
+RUN pip3.6 install pandas
+RUN pip3.6 install jsonschema
+RUN pip3.6 install numpy
+RUN pip3.6 install psycopg2
+RUN pip3.6 install SQLAlchemy
+RUN pip3.6 install xlrd
+RUN pip3.6 install matplotlib
+RUN pip3.6 install scipy
+RUN pip3.6 install statsmodels
+RUN pip3.6 install patsy
+
 
 # Create symlinks for the C objects (so we dont need to set LD_LIBRARY_PATH).
 RUN ln -s /usr/lib/libpostal.a /usr/lib64/libpostal.a
