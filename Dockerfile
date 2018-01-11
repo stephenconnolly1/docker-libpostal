@@ -40,7 +40,8 @@ RUN pip3.6 install postal \
     matplotlib \
     scipy \
     statsmodels \
-    patsy
+    patsy \
+	six
 
 # Create symlinks for the C objects (so we dont need to set LD_LIBRARY_PATH).
 RUN ln -s /usr/lib/libpostal.a /usr/lib64/libpostal.a
